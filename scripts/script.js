@@ -84,7 +84,6 @@ class Calculator {
 
 
 
-
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
@@ -120,3 +119,16 @@ deleteButton.addEventListener('click', button =>{
     calculator.delete()
     calculator.updateDisplay()
 })
+
+//Keyboard Support
+
+window.addEventListener('keydown', handleKeyboardInput)
+
+function handleKeyboardInput(e){
+  if (e.key >=0 && e.key <=9) calculator.appendNumber(e.key), calculator.updateDisplay()
+  if (e.key === '.' || e.key === ',') calculator.appendNumber("."), calculator.up4dateDisplay()
+  if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') calculator.chooseOperation(e.key), calculator.updateDisplay()
+  if (e.key === '=' || e.key === 'Enter') calculator.compute(), calculator.updateDisplay()
+  if (e.key === 'Backspace' || e.key === 'Delete' ) calculator.delete(), calculator.updateDisplay()
+  if (e.key === 'Escape') calculator.clear(), calculator.updateDisplay()
+}
