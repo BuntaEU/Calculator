@@ -6,48 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/script.js" defer ></script>
 </head>
 <body>
-  <main class ="main">
-    <div class = "calculator">
-        <div class ="display">
-            <input type ="text" name ="display" id="display">
-            <input type ="text" name = "display" id ="operand"> 
-            <input type ="text" name= "display" id = "answer">
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class = "previous-operand"></div>
+            <div data-current-operand class = "current-operand"></div>
+
         </div>
-        <div class = "buttons">
-            <div class ="row1">
-                <button onclick = "getClick(7)">7</button>
-                <button onclick = "getClick(8)">8</button>
-                <button onclick = "getClick(9)">9</button>
-                <button class = "special" onclick ="getClick('DEL')">DEL</button>
-                <button class ="special" onclick="getClick('AC')">AC</button>
-            </div>
-            <div class ="row2">
-                <button onclick = "getClick(4)">4</button>
-                <button onclick = "getClick(5)">5</button>
-                <button onclick = "getClick(6)">6</button>
-                <button class = "special" onclick ="getClick('x')">x</button>
-                <button class ="special" onclick="getClick('/')">/</button>
-            </div>
-            <div class ="row3">
-                <button onclick = "getClick(1)">1</button>
-                <button onclick = "getClick(2)">2</button>
-                <button onclick = "getClick(3)">3</button>
-                <button class = "special" onclick ="getClick('-')">-</button>
-                <button class ="special" onclick="getClick('+')">+</button>
-            </div>
-            <div class ="row4">
-                <button onclick = "getClick(0)">0</button>
-                <button class = "special" onclick ="getClick('.')">.</button>
-                <button class ="special" onclick="calculate()">=</button>
-                
-            </div>
-        </div>
+        <button data-all-clear class= "span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>/</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>0</button>
+        <button data-number>.</button>
+        <button data-equals class="span-two">=</button>
+
     </div>
 
-  </main>  
-    
 </body>
 </html>
